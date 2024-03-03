@@ -16,6 +16,7 @@ headerTemplate.innerHTML = `
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      z-index: 999px;
     }
 
     .header_content_container {
