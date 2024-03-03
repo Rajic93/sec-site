@@ -12,7 +12,6 @@ servicesTemplate.innerHTML = `
       align-items: center;
       background: #FFFFFF;
       width: 100%;
-      border-bottom: 5px solid #ffde59;
     }
 
     .services_container {
@@ -56,12 +55,52 @@ servicesTemplate.innerHTML = `
       .services_innovation_icon {
         margin-top: 50px;
       }
+      .services_container:last-child {
+        padding-top: 0 !important;
+      }
+
+      .no-padding-bt {
+        padding-bottom: 0 !important;
+      }
+
+      .line-icon {
+        display:none
+      }
+
+      .services-code-backgroud svg {
+        top: -400px !important;
+        right: -400px !important;
+      }
     }
 
     @media (min-width: 986px) {
       .services_container--reverse {
         flex-direction: row-reverse;
       }
+
+      .addition-padding-lg-100 {
+        padding-top: 150px !important;
+      }
+      .addition-padding-lg-50 {
+        padding-top: 50px !important;
+      }
+
+      .line-icon-1 {
+        position: absolute;
+        bottom: -150px;
+        right: 32%;
+        transform: rotate(-25deg);
+      }
+
+      .line-icon-2 {
+        position: absolute;
+        bottom: -90px;
+        left: 38%;
+        transform: rotate(-110deg);
+      }
+    }
+    .position-relative {
+      position: relative;
     }
 
     .services_quality_icon {
@@ -83,11 +122,14 @@ servicesTemplate.innerHTML = `
     }
 
     .services_title {
-      font-size: 36px;
+      display: block;
+      font-size: 32px;
+      padding-top: 50px;
+      margin-bottom: 50px;
     }
 
     .services_subtitle {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .services_text--bold {
@@ -117,26 +159,46 @@ servicesTemplate.innerHTML = `
       bottom: 150px;
     }
 
+    .no-margin {
+      margin: 0 !important;
+    }
+
+    .services-code-backgroud svg {
+      fill: #003986;
+      position: absolute;
+      top: -350px;
+      right: -250px;
+    }
+    .services-code-backgroud svg * {
+      fill: #003986;
+    }
+    
+    .no-overflow {
+      overflow: hidden;
+    }
   </style>
-  <div class='services'>
-    <div class='services_container'>
+  <div class='services position-relative no-overflow'>
+    <sec-code-background class='services-code-backgroud'></sec-code-background>
+    <div class='services_container no-padding-bt addition-padding-lg-50 position-relative'>
       <span class='services_title services_text--bold services_text--quality'>Custom Software Development
         <br />
-        <span class='services_subtitle services_text--light'>We adhere to strict quality controls,<br /> including code reviews,<br /> automated testing<br /> and continuous integration</span>
+        <span class='services_subtitle'>Tailored solutions for unique business needs.</span>
       </span>
       <sec-software-development-icon class='services_software-development_icon'></sec-software-development-icon>
+      <sec-line-icon class='line-icon line-icon-1'></sec-line-icon>
     </div>
-    <div class='services_container services_container--reverse'>
-      <span class='services_title services_text--bold services_text--learning'>Mobile & Web Development
+    <div class='services_container services_container--reverse no-padding-bt position-relative'>
+      <span class='services_title services_text--bold services_text--learning no-margin addition-padding-lg-100'>Mobile & Web Development
         <br />
-        <span class='services_subtitle services_text--light'>Our team stays ahead by<br /> continuously exploring new<br /> technologies and best<br /> practices.</span>
+        <span class='services_subtitle'>Engaging apps with seamless user experiences.</span>
       </span>
       <sec-mobile-web-development-icon class='services_mobile-web-development_icon'></sec-mobile-web-development-icon>
+      <sec-line-icon class='line-icon line-icon-2'></sec-line-icon>
     </div>
     <div class='services_container'>
       <span class='services_title services_text--bold services_text--innovation'>Cloud Solutions
         <br />
-        <span class='services_subtitle services_text--light'>Collaboration across projects<br /> fuels our innovative solutions.</span>
+        <span class='services_subtitle'>Scalable and secure cloud-based services.</span>
       </span>
       <sec-cloud-solutions-icon class='services_cloud-solutions_icon'></sec-cloud-solutions-icon>
     </div>
