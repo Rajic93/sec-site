@@ -30,6 +30,12 @@ headerTemplate.innerHTML = `
       padding-left: 8px;
       padding-right: 16px;
       border-right: 1px solid grey;
+      pointer: cursor;
+    }
+
+    .header_content_item a {
+      text-decoration: none !important;
+      color: #003986;
     }
     .header_content_item:last-child {
       margin-right: 0;
@@ -45,6 +51,7 @@ headerTemplate.innerHTML = `
       <span class='header_content_item'>Services</span>
       <span class='header_content_item'>Experience</span>
       <span class='header_content_item'>Contact</span>
+      <span class='header_content_item'><a href='https://softwareengineeringcrafted.substack.com/' target='_blank'>Academy</a></span>
     </div>
   </div>
 `
