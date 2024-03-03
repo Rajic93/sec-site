@@ -41,8 +41,9 @@ headerTemplate.innerHTML = `
     <sec-logo></sec-logo>
     <div class='header_content_container'>
       <span class='header_content_item'>Vision</span>
+      <span class='header_content_item'>Values</span>
       <span class='header_content_item'>Services</span>
-      <span class='header_content_item'>Past Work</span>
+      <span class='header_content_item'>Experience</span>
       <span class='header_content_item'>Contact</span>
     </div>
   </div>
