@@ -29,14 +29,28 @@ visionTemplate.innerHTML = `
     }
     .vision_half--clipped {
       clip-path: polygon(0% 8%, 4% 13%, 7% 15%, 11% 16%, 15% 17%, 19% 18%, 24% 19%, 28% 20%, 34% 21%, 37% 21%, 42% 21%, 47% 21%, 52% 21%, 56% 21%, 62% 21%, 68% 20%, 73% 19%, 77% 18%, 81% 17%, 87% 15%, 89% 14%, 96% 11%, 100% 9%, 100% 100%, 0% 100%);
-      
+      z-index: 1;
     }
 
     .vision_half--bg-light {
       background: #ffffff;
     }
+
+    .vision_half--bg-gold {
+      background: #FFDE59;
+    }
     .vision_half--relative {
       position: relative;
+    }
+    .vision--relative {
+      position: relative;
+    }
+    .vision--absolute {
+      position: absolute;
+    }
+    .vision_low--bg {
+      bottom: 5px;
+      z-index: 0;
     }
 
     .vision_text {
@@ -94,7 +108,7 @@ visionTemplate.innerHTML = `
       height: 300px;
     }
   </style>
-  <div class='vision'>
+  <div class='vision vision--relative'>
     <div class='vision_upper vision_half--relative'>
       <sec-code-background class='vision-code-backgroud'></sec-code-background>
       <span class='vision_text vision_text--light vision_title'>We believe <span class='vision_text--gold'>software engineering</span></br> is a <span class='vision_text--gold'>craft</span>
@@ -108,6 +122,7 @@ visionTemplate.innerHTML = `
       <span class='vision_text--low'>Every line of code we write is part of a larger masterpiece, meticulously crafted to ensure precision, beauty and durability.</span>
       <sec-vision-icon class='vision_icon'></sec-vision-icon>
     </div>
+    <div class='vision_lower vision_half--bg-gold vision_half--clipped vision--absolute vision_low--bg'></div>
   </div>
 `;
 
