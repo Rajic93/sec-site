@@ -21,7 +21,7 @@ footerTemplate.innerHTML = `
     .footer_text {
       color: #FFFFFF;
       margin-bottom: 50px;
-      font-size: 24px;
+      font-size: 20px;
       border-right: 1px solid #FFDE59;
       padding-right: 10px;
       margin-right: 10px;
@@ -36,8 +36,26 @@ footerTemplate.innerHTML = `
     .footer_text--gold {
       color: #FFDE59;
     }
+
+    .footer_text a {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+
+    .no-border {
+      border: none;
+    }
+
+    .no-margin {
+      margin: 0;
+    }
   </style>
   <div class='footer'>
+    <div>
+      <span class='footer_text footer_text--gold no-border no-margin'>Contact:</span>
+      <span class='footer_text'><a href='mailto: softwareengineeringcrafted@gmail.com'>softwareengineeringcrafted@gmail.com</a></span>
+    </div>
+    <br />
     <div>  
       <span class='footer_text'>Software Engineering <span class='footer_text--gold'>Crafted</span></span>
       <span class='footer_text'>Nis, Serbia</span>
